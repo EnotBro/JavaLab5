@@ -6,10 +6,23 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
 
+/**
+ * class injector
+ */
 public class Injector  {
 
+    /**
+     * name of property file
+     */
     private String filenameOfProperties = "var1.properties";
 
+    /**
+     * Initializes the fields of an object of any class with annotation @AutoInjectable
+     * by class objects according to the property file (default var1.properties)
+     * @param someObject The object for injection
+     * @param <T> Type of the object
+     * @return The object after injection
+     */
     public <T> T inject(T someObject)
     {
         try
@@ -35,10 +48,18 @@ public class Injector  {
         return someObject;
     }
 
+    /**
+     * Getting name of property file
+     * @return  name of property file
+     */
     public String getFilenameOfProperties() {
         return filenameOfProperties;
     }
 
+    /**
+     * Seting new name of property file
+     * @param filename new name of property file
+     */
     public void setFilenameOfProperties(String filename)
     {
         filenameOfProperties = filename;

@@ -25,6 +25,9 @@ public class InjectorTest {
     }
 
     @Test
+    /**
+     * test with var1.properties
+     */
     public void injectAC() {
         SomeBean sb = (new Injector().inject(new SomeBean()));
         sb.foo();
@@ -33,6 +36,9 @@ public class InjectorTest {
     }
 
     @Test
+    /**
+     * test with var2.properties
+     */
     public void injectBC() {
         Injector injector = new Injector();
         injector.setFilenameOfProperties("var2.properties");

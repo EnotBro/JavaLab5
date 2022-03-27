@@ -7,5 +7,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
+/**
+ * Annotation for field foк which inject is possible
+ */
 public @interface AutoInjectable {
 }
